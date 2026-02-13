@@ -5,11 +5,11 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
-from config import Config
-from engine import LLMEngine
-from middleware import ApiKeyMiddleware
-from routes import create_router
-from tasks import TaskStore
+from app.core.config import Config
+from app.services.engine import LLMEngine
+from app.services.task_store import TaskStore
+from app.api.middleware import ApiKeyMiddleware
+from app.api.routes import create_router
 
 config = Config()
 engine = LLMEngine(config)

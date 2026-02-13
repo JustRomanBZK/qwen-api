@@ -4,9 +4,9 @@ import uuid
 from fastapi import APIRouter
 from fastapi.responses import PlainTextResponse, Response
 
-from engine import LLMEngine
-from schemas import ChatRequest
-from tasks import TaskStore
+from app.models.schemas import ChatRequest
+from app.services.engine import LLMEngine
+from app.services.task_store import TaskStore
 
 
 def create_router(engine: LLMEngine, task_store: TaskStore) -> APIRouter:

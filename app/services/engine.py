@@ -1,7 +1,7 @@
 import time
 import uuid
 
-from config import Config
+from app.core.config import Config
 
 
 class LLMEngine:
